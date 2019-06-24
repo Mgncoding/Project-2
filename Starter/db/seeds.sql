@@ -1,0 +1,4 @@
+-- Insert a set of records.
+INSERT INTO customer (firstName, lastName, phone, email, postalCode, city, state, country, addressLine1, addressLine2) VALUES ("John", "Doe", "5949627459", "johndoe@email.com", "48943", "Jacksonville", "Florida", "USA", "231 Dreamers Lane");
+INSERT INTO customer (firstName, lastName, phone, email, postalCode, city, state, country, addressLine1, addressLine2) VALUES ("Sarah", "Bright", "5919627159", "sarahbright@email.com", "34786", "Orlando", "Florida", "USA", "528 Crossers Circle");
+INSERT INTO customer (firstName, lastName, phone, email, postalCode, city, state, country, addressLine1, addressLine2) VALUES ("Ken", "Burn", "2946627456", "kenburns@email.com", "48943", "Jacksonville", "Florida", "USA", "081 Worst Road"));
