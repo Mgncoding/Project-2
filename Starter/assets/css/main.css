@@ -1,0 +1,147 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+.parallax1 {
+    background-image: url("../images/wrenchWall.jpg");
+  }
+
+.parallax2 {
+    background-image: url("../images/tire.jpg");
+}
+
+.parallax3 {
+    background-image: url("../images/tire.jpg");
+    /* display: none; */
+}
+
+.parallax1, .parallax2, .parallax3 {
+    min-height: 325px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+.styleDiv {
+    background-image: url('../images/background-blank-empty-62693.jpg');
+    background-repeat: no repeat;
+    height:200%;
+    background-color:rgba(250, 246, 246, 0.911);
+    padding: 1%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+}
+
+.carForm {
+    margin-left: 20%;
+    padding-bottom: 2%;
+}
+
+#carYearBtn, #servicesNeededBtn {
+    margin-left: 5px;
+}
+
+.carFormVin {
+    margin-left: 30%;
+    padding-bottom: 2%;
+}
+
+.serviceNeededForm {
+    margin-left: 35%;
+    padding-bottom: 2%;
+}
+
+#submitBtn {
+    background-color: rgb(17, 60, 117); 
+    margin-left: 47%;
+    font-size: 110%;
+}
+
+#submitBtn:hover {
+    background-color: rgb(76, 119, 175); 
+    border-color: rgb(76, 119, 175);
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+
+/* Second Area */
+.oilChangeImg {
+    float: left;
+    margin-left: 10%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+.serviceName {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.suppliesContainer {
+    margin-left: 5%;
+}
+
+a:link, a:visited {
+    color: rgb(51, 51, 102);  
+}
+  
+  
+a:hover {
+    text-decoration: underline;
+}
+
+
+.proceedOrNot {
+    text-align: center;
+}
+
+.yesBtn, .noBtn {
+    background-color: rgb(17, 60, 117); 
+    font-size: 110%;
+    margin: 1%;
+}
+
+.yesBtn:hover, .noBtn:hover {
+    background-color: rgb(76, 119, 175); 
+    border-color: rgb(76, 119, 175);
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+
+/* Third Area */
+.styleDivDIY {
+    background-image: url('../images/background-blank-empty-62693.jpg');
+    background-repeat: no repeat;
+    height:200%;
+    background-color:rgba(250, 246, 246, 0.911);
+    padding: 1%;
+    font-family: 'Noto Sans', sans-serif;
+    /* display: none; */
+}
+
+
+h2 {
+    text-align: center;
+}
+
+.diyVideo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.youtubeLink {
+    text-align: center;
+}
