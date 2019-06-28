@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="parallax1"></div>
+    <!-- First Area -->
+    <div class="styleDiv">
+        <img src="assets/images/logoBlack.png" alt="logo" class="img-thumbnail logo">
+
+        <div class="container">
+            <div class="carForm">
+
+                <div class="btn-group dropright">
+                    <h3>I drive a: </h3>
+                    <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="carYearBtn"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Car Year</button>
+                    <div class="dropdown-menu">
+                        <p class="dropdown-item">Dropdown Option</p>
+                        <p class="dropdown-item">Another Dropdown Option</p>
+                    </div>
+                </div>
+
+                <div class="btn-group dropright">
+                    <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="carMakeBtn"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Car Make</button>
+                    <div class="dropdown-menu">
+                        <!-- Dropdown menu links -->
+                    </div>
+                </div>
+
+                <div class="btn-group dropright">
+                    <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="carModelBtn"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Car Model</button>
+                    <div class="dropdown-menu">
+                        <!-- Dropdown menu links -->
+                    </div>
+                </div>
+
+                <div class="btn-group dropright">
+                    <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mileageRangeBtn"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mileage Range</button>
+                    <div class="dropdown-menu">
+                        <!-- Dropdown menu links -->
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="carFormVin">
+                <form>
+                    <div class="row">
+                        <h3>Or: </h3>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" id="carVinNumber" placeholder="Car VIN Number">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control carMileage" placeholder="Car Mileage">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="serviceNeededForm">
+                <div class="btn-group dropright">
+                    <h3>I need this service: </h3>
+                    <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="servicesNeededBtn"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-secondary" id="submitBtn">Done!</button>
+        </div>
+    </div>
+
+
+
+    <!-- Second Area -->
+    <div class="parallax2"></div>
+    <div class="styleDiv">
+        <h1 class="serviceName">DIY Oil Change</h1>
+        <div class="row">
+
+            <img src="assets/images/underneathCar.jpg" alt="Oil Change" class="img-thumbnail oilChangeImg">
+
+            <div class="servicesContainer">
+                <div class="difficulty">
+                    <h4>Degree of Difficulty: </h4>
+                    <h6>Moderate</h6>
+                </div> <br>
+
+                <div class="estimatedTime">
+                    <h4>Estimated Time: </h4>
+                    <h6>Approximately 30 minutes</h6>
+                </div> <br>
+
+                <div class="estimatedCost">
+                    <h4>Estimated Cost: </h4>
+                    <h6>$25-$40</h6>
+                </div> <br>
+
+            </div>
+
+            <div class="suppliesContainer">
+                <div class="suppliesNeeded">
+                    <h4>Supplies Needed: </h4>
+                    <h6>
+                        <ul class="suppliesNeededList">
+                            <li>Oil</li>
+                            <li>Oil Filter</li>
+                            <li>Wrench</li>
+                            <li>Funnel</li>
+                            <li>Latex Gloves</li>
+                        </ul>
+                    </h6>
+                </div>
+                <br>
+                <h4><a href="#">Need help finding supplies?</a></h4>
+            </div>
+        </div>
+
+        <div class="proceedOrNot">
+            <h2>Proceed with DIY?</h2>
+            <button type="button" class="btn btn-secondary yesBtn">Yes! Show me how-to videos</button>
+            <button type="button" class="btn btn-secondary noBtn">No, thanks. Search a mechanic</button>
+        </div>
+    </div>
+
+
+
+
+    <!-- Third Area -->
+    <div class="parallax3"></div>
+    <div class="styleDivDIY">
+
+        <h2>How-To Video:</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/O1hF25Cowv8" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            class="diyVideo"></iframe>
+
+        <br>
+        <h4 class="youtubeLink"><a href="https://www.youtube.com/results?search_query=how+to+change+oil+in+car"
+                target="_blank">Show more helpful videos</a></h4>
+    </div>
+
+
+    <!-- JQuery Link -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="server.js"></script>
+</body>
+
+</html>
