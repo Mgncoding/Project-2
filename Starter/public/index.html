@@ -1,0 +1,130 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- CSS Link -->
+    <!-- Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+             * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World!</h1>
+    <button onclick="getLocation()"></button>
+    <div id="map"></div>
+    <div class="parallax4"></div>
+    <div class="styleDiv">
+        <div class="col">
+            <img src="assets/images/logoBlack.png" alt="logo" class="img-thumbnail logo2">
+        </div>
+
+
+    <div class="row">
+        <form id="signInForm">
+                <h3>Already a User?</h3>
+
+                <div class="col">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="signInEmail" aria-describedby="emailHelp"placeholder="example@email.com">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="passwordSignIn" placeholder="Password">
+                    </div>
+                </div>
+
+               <button type="submit" class="btn btn-primary" id="signUpBtn">Submit</button>
+        </form>
+
+
+        <form id="signUpForm">
+                <h3>Become a User</h3>
+                <div class="col">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" id="usernameSignUp" placeholder="Username">
+                        </div>
+                    </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" id="emailSignUp" aria-describedby="emailHelp"                       placeholder="example@email.com">
+                    </div>
+                </div>
+
+                <div class="col">
+                        <div class="form-group">
+                            <input type="text" name="phone" class="form-control" id="phoneNumberSignUp" placeholder="555-900-0101">
+                        </div>
+                    </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <input type="password" name="password" class="form-control" id="passwordSignIn" placeholder="Password">
+                    </div>
+                </div>
+
+               <button type="submit" class="btn btn-primary" id="signInBtn">Submit</button>
+        </form>
+    </div>
+
+
+    </div>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script>
+var map = document.getElementById("map");
+var cords = {}
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    
+  } else {
+    map.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  map.innerHTML =
+    "Latitude: " +
+    position.coords.latitude +
+    "<br>Longitude: " +
+    position.coords.longitude;
+    cords.latitude = position.coords.latitude
+    cords.longitude = position.coords.longitude
+    console.log(cords);
+    $.post("/api/appointments", cords, function(data){
+  console.log(data);
+  
+})
+                .then(function (data) {
+                    console.log("index.html", data);
+                });
+}
+    </script>
+</body>
+
+</html>
