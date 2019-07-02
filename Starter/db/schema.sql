@@ -16,7 +16,7 @@ CREATE TABLE customers
 `country` varchar(50), NOT NULL
 `addressLine1` varchar(50), NOT NUll
 `addressLine2` varchar(50),
-PRIMARY KEY (id)
+PRIMARY KEY (customerId)
 );
 
 
