@@ -19,44 +19,35 @@
     <div class="parallax1"></div>
     <!-- First Area -->
     <div class="styleDiv">
-        <img src="assets/images/logoBlack.png" alt="logo" class="img-thumbnail logo">
+        <div class='row'>
+            <div class='col'>
+                <img src="assets/images/logoBlack.png" alt="logo" class="img-thumbnail logo">
+            </div>
+            <div class='col'>
+                <a href="../Starter/signUp.html" id='signUpLink'>Go Back to Services Page</a>
+            </div>
+        </div>
 
         <div class="container">
             <div class="carForm">
 
-                <div class="btn-group dropright">
-                    <h3>I drive a: </h3>
-                    <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="carYearBtn"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Car Year</button>
-                    <div class="dropdown-menu">
-                        <p class="dropdown-item">Dropdown Option</p>
-                        <p class="dropdown-item">Another Dropdown Option</p>
+                <form>
+                    <div class="row">
+                        <h3>Or: </h3>
+                        <div class="col">
+                            <input type="text" class="form-control carYear" placeholder="Car Year">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control carMileage" placeholder="Car Make">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control carModel" placeholder="Car Model">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control carMileage" placeholder="Car Mileage">
+                        </div>
                     </div>
-                </div>
-
-                <div class="btn-group dropright">
-                    <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="carMakeBtn"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Car Make</button>
-                    <div class="dropdown-menu">
-                        <!-- Dropdown menu links -->
-                    </div>
-                </div>
-
-                <div class="btn-group dropright">
-                    <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="carModelBtn"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Car Model</button>
-                    <div class="dropdown-menu">
-                        <!-- Dropdown menu links -->
-                    </div>
-                </div>
-
-                <div class="btn-group dropright">
-                    <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mileageRangeBtn"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mileage Range</button>
-                    <div class="dropdown-menu">
-                        <!-- Dropdown menu links -->
-                    </div>
-                </div>
+                </form>
 
             </div>
 
@@ -76,18 +67,6 @@
             </div>
 
 
-            <div class="serviceNeededForm">
-                <div class="btn-group dropright">
-                    <h3>I need this service: </h3>
-                    <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="servicesNeededBtn"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                    </div>
-                </div>
-            </div>
-
             <button type="button" class="btn btn-secondary" id="submitBtn">Done!</button>
         </div>
     </div>
@@ -97,53 +76,37 @@
     <!-- Second Area -->
     <div class="parallax2"></div>
     <div class="styleDiv">
-        <h1 class="serviceName">DIY Oil Change</h1>
+        <h1 class="serviceName">Suggested Services:</h1>
         <div class="row">
 
             <img src="assets/images/underneathCar.jpg" alt="Oil Change" class="img-thumbnail oilChangeImg">
 
             <div class="servicesContainer">
                 <div class="difficulty">
-                    <h4>Degree of Difficulty: </h4>
-                    <h6>Moderate</h6>
+                    <h4>Brake Pad Replacement</h4>
+                    <h6>Estimated Cost: $136-$215</h6>
                 </div> <br>
 
                 <div class="estimatedTime">
-                    <h4>Estimated Time: </h4>
-                    <h6>Approximately 30 minutes</h6>
+                    <h4>Wheel Bearing Replacement -Front</h4>
+                    <h6>Estimated Cost: $304-$421</h6>
                 </div> <br>
 
                 <div class="estimatedCost">
-                    <h4>Estimated Cost: </h4>
-                    <h6>$25-$40</h6>
+                    <h4>Spark Plug Replacement</h4>
+                    <h6>$118-$161</h6>
                 </div> <br>
 
-            </div>
-
-            <div class="suppliesContainer">
                 <div class="suppliesNeeded">
-                    <h4>Supplies Needed: </h4>
-                    <h6>
-                        <ul class="suppliesNeededList">
-                            <li>Oil</li>
-                            <li>Oil Filter</li>
-                            <li>Wrench</li>
-                            <li>Funnel</li>
-                            <li>Latex Gloves</li>
-                        </ul>
-                    </h6>
-                </div>
-                <br>
-                <h4><a href="#">Need help finding supplies?</a></h4>
+                    <h4>Alternator Replacement</h4>
+                    <h6>Estimated Cost: $268-$716</h6>
             </div>
-        </div>
-
-        <div class="proceedOrNot">
-            <h2>Proceed with DIY?</h2>
-            <button type="button" class="btn btn-secondary yesBtn">Yes! Show me how-to videos</button>
-            <button type="button" class="btn btn-secondary noBtn">No, thanks. Search a mechanic</button>
         </div>
     </div>
+    
+        <div class="proceedOrNot">
+            <button type="button" class="btn btn-secondary yesBtn">Find a Mechanic</button>
+        </div>
 
 
 
@@ -174,11 +137,7 @@
         // Get Users Cordinates
         var userData = {};
         $(window).on("load", function (event) {
-            if (confirm("Location needed for accurate results!")) {
-                getLocation();
-            } else {
-                getLocation();
-            }
+            getLocation();
         });
 
         function getLocation() {
