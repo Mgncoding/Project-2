@@ -168,6 +168,36 @@
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="server.js"></script>
+    <script>
+        var userData = {};
+        $(window).on("load", function (event) {
+            if (confirm("Location needed for accurate results!")) {
+                getLocation();
+            } else {
+                getLocation();
+            }
+        });
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                map.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            userData.latitude = position.coords.latitude;
+            userData.longitude = position.coords.longitude;
+            // userData.input = $("#userSearch").val().trim();
+            console.log(userData);
+            $.post("/api/appointments", userData, function (data) {
+                console.log(data);
+            }).then(function (data) {
+                console.log("index.html", data);
+            });
+        }
+    </script>
 </body>
 
 </html>
