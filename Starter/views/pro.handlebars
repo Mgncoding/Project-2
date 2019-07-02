@@ -5,19 +5,6 @@
         <div id="logo"></div>
       </header>  
     </div>
-  
-  {{!-- <div class="flex mb-4 mt-4">
-    <div class="w-1/3"></div>
-    <form class="w-1/3 max-w-sm">
-      <div id="formDiv">
-        <input class="focus:outline-none" type="text" placeholder="Enter Zipcode">
-        <button class="btn focus:outline-none focus:shadow-outline" type="button">
-            Submit
-          </button>
-      </div>
-    </form>
-    <div class="w-1/3"></div>
-  </div> --}}
 
   <div class="flex mb-4">
     <div id="map" class="w-1/2 text-center"></div>
@@ -35,11 +22,17 @@
   <!-- Modal content -->
   <div class="modal-content">
     <div class="modal-header">
-      <h2>Mechanic's Name</h2>
+      <h2 id="modalName">Mechanic's Name</h2>
       <span class="closeModal">&times;</span>
     </div>
     <div class="modal-body">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quibusdam error voluptatum, quam odio modi minus nobis nam veritatis sit est, eligendi placeat repellat culpa quis, aut facere distinctio veniam.</p>
+      <ul>
+        <li id="modalPhoto"></li>
+        <div class="flex mt-4">
+          <li id="modalLink" class="w-1/2 text-center"><a href="#">Mechanic's Link</a></li>
+          <li id="modalPhone" class="w-1/2 text-center">407-407-4074</li>
+        </div>
+      </ul>
     </div>
     <div class="modal-footer"></div>
   </div>

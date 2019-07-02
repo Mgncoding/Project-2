@@ -108,8 +108,18 @@ form input {
 
 .modal-body {
   padding: 15px;
+  color: #515551
 }
 
+#modalPhoto {
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("https://picsum.photos/200/200");
+  background-repeat: no-repeat;
+  @apply bg-contain rounded-lg block relative;
+}
 @keyframes modalOpen {
   from {opacity: 0};
   to {opacity: 1}
