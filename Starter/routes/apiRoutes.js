@@ -50,8 +50,7 @@ module.exports = function(app) {
       "location=" + req.body.latitude + "," + req.body.longitude + "&";
     var radius = "radius=4000&";
     var type = "type=car_repair&";
-    var keyword = "keyword=alignment&";
-    // var keyword = "keyword=" + req.body.input + "&";
+    var keyword = "keyword=maintenance&";
     var key = "key=AIzaSyCReYUHB_r_e1waSDFZsZemuNPUMksfWY4";
     queryURL = baseURL + location + radius + type + keyword + key;
 
@@ -72,6 +71,7 @@ module.exports = function(app) {
       .catch(function(err) {
         console.log(err.message, "No available fields in this type.");
       });
+    res.render("../index.html", resp);
   });
   // TODO MAIN
   app.post("/api/getMaintenance", function(req, res) {
