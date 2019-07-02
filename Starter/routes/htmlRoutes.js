@@ -9,17 +9,10 @@ app.use(express.json());
 app.use(express.static("public"));
 
 module.exports = function(app) {
-  // Load index page
   app.get("/", function(req, res) {
-    db.User.findAll({}).then(function(dbExamples) {
-      // res.render("index", {
-      //   msg: "Welcome!",
-      //   examples: dbExamples
-      // });
-      res.send("hello world");
-    });
+    console.log("in /api/appoint.");
+    res.sendFile(path.join(__dirname, "../index.html"));
   });
-
   // TODO Second Page
   app.get("/info2", function(req, res) {
     console.log("The: " + req + res);
@@ -45,10 +38,7 @@ module.exports = function(app) {
       });
   });
 
-  app.get("/api/appointments", function(req, res) {
-    console.log("in /api/appoint.");
-    res.sendFile(path.join(__dirname, "../index.html"));
-  });
+  
   // TODO Maint
   app.get("/api/getMaintenance", function(req, res) {
     console.log("in /api/main.");

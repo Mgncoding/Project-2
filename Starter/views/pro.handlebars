@@ -5,32 +5,40 @@
         <div id="logo"></div>
       </header>  
     </div>
-  
-  <div class="flex mb-4 mt-4">
-    <div class="w-1/3"></div>
-    <form class="w-1/3 max-w-sm">
-      <div id="formDiv">
-        <input class="focus:outline-none" type="text" placeholder="Enter Zipcode">
-        <button class="btn focus:outline-none focus:shadow-outline" type="button">
-            Submit
-          </button>
-      </div>
-    </form>
-    <div class="w-1/3"></div>
-  </div>
 
   <div class="flex mb-4">
     <div id="map" class="w-1/2 text-center"></div>
     <div id="mapList" class="w-1/2 text-center">
-        <ul>
-          <li>Mechanic 1</li>
-          <li>Mechanic 2</li>
-          <li>Mechanic 3</li>
-          <li>Mechanic 4</li>
-          <li>Mechanic 5</li>
+        <ul id="mechanicList">
+          <li><button id="mechanicBtn">Mechanic 1</button></li>
         </ul>
     </div>
   </div>
 </div>
 
-<script src="/js/index.js"></script>
+<!-- The Modal -->
+<div id="mechanicModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="modalName">Mechanic's Name</h2>
+      <span class="closeModal">&times;</span>
+    </div>
+    <div class="modal-body">
+      <ul>
+        <li id="modalPhoto"></li>
+        <div class="flex mt-4">
+          <li id="modalLink" class="w-1/2 text-center"><a href="#">Mechanic's Link</a></li>
+          <li id="modalPhone" class="w-1/2 text-center">407-407-4074</li>
+        </div>
+      </ul>
+    </div>
+    <div class="modal-footer"></div>
+  </div>
+
+</div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="/js/index.js"></script>
