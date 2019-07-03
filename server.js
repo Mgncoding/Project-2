@@ -1,9 +1,10 @@
-require("dotenv").config()
+require("dotenv").config();
+var env = require("dotenv");
 var express = require("express");
 var exphbs = require("express-handlebars");
+var mysql = require("mysql");
 var db = require("./models");
 
-var db = require("./models")
 var app = express();
 var PORT = process.env.PORT || 3000;
 
