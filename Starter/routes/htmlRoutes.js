@@ -38,7 +38,6 @@ module.exports = function(app) {
       });
   });
 
-  
   // TODO Maint
   app.get("/api/getMaintenance", function(req, res) {
     console.log("in /api/main.");
@@ -50,6 +49,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../index.html"));
   });
 
+  app.get("/proSearch", function(req, res) {
+    res.render("pro");
+  });
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");

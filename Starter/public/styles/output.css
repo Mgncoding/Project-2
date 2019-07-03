@@ -7683,6 +7683,8 @@ form input {
 
 .modal-header h2 {
   margin: 0;
+  padding-top: 2px;
+  font-size: 2rem
 }
 
 /* Modal Close Button */
@@ -7691,10 +7693,7 @@ form input {
   color: #fefefe;
   float: right;
   font-size: 30px;
-  font-weight: bold;
-  position: relative;
-  left: 0px;
-  top: -37px;
+  font-weight: bold
 }
 
 .closeModal:hover,
