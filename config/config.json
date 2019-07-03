@@ -1,4 +1,12 @@
 {
+  "local": {
+   "username": "root",
+   "password": "root",
+   "database": "project2_db",
+   "host": "localhost",
+   "dialect": "mysql"
+   },
+
   "development": {
     "username": "root",
     "password": null,
@@ -8,8 +16,8 @@
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "testdb",
+    "password": "root",
+    "database": "project2_db",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false

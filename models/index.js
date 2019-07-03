@@ -11,12 +11,12 @@ var db = {};
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
-  var sequelize = new Sequelize(
-    config.database,
-    config.username,
-    config.password,
-    config
-  );
+  const Sequelize = require('sequelize');
+// Option 1: Passing parameters separately
+var sequelize = new Sequelize("database", "username", "password", {
+  host: "localhost",
+  dialect: "mysql"
+})
 }
 
 fs.readdirSync(__dirname)
